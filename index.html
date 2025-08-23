@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -61,52 +61,6 @@ function FP_getObjectByID(id,o) {//v1.0
   </div>
 
 
-  <script type="text/javascript">
-    const images = [
-      "ad/ad_mario.png",
-      "ad/ad_none.png",
-      "ad/ad_gay.png",
-      "ad/ad_rec.png",
-      "ad/ad_enlight.png",
-      "ad/ad_egg.png",
-      "ad/ad_nick.png"
-
-    ];
-    
-
-    function showRandomImages() {
-      let firstIndex = Math.floor(Math.random() * images.length);
-      let secondIndex;
-
-      // ensure second index is different from first
-      do {
-        secondIndex = Math.floor(Math.random() * images.length);
-      } while (secondIndex === firstIndex);
-
-      document.getElementById("ad1").src = images[firstIndex];
-      document.getElementById("link1").href = links[firstIndex];
-
-      // Set second image + link
-      document.getElementById("ad2").src = images[secondIndex];
-      document.getElementById("link2").href = links[secondIndex];
-    }  
-      
-    // Hyperlinks corresponding to each image
-    const links = [
-      "https://superfuckingmario.com",
-      "https://discord.com/channels/1269010383742701679/1408559124483936307",
-      "https://discord.gg/XC49prjjFM",
-      "https://recroomlaboratories.com/home",
-      "https://rec.net/room/GravityPulseEnlightened",
-      "https://californian-ea.org",
-      "https://rec.net/download"
-
-    ];  
-
-    // Show random images on page load
-    window.onload = showRandomImages;
-    
-  </script>
 
 <table align="center">
   <tr>
@@ -186,7 +140,54 @@ function FP_getObjectByID(id,o) {//v1.0
     <td>&nbsp;</td>
   </tr>
 </table>
+
+  <script type="text/javascript">
+    const images = [
+      "ad/ad_mario.png",
+      "ad/ad_none.png",
+      "ad/ad_gay.png",
+      "ad/ad_rec.png",
+      "ad/ad_enlight.png",
+      "ad/ad_egg.png",
+      "ad/ad_nick.png"
+
+    ];
+    
+
+    function showRandomImages() {
+      let firstIndex = Math.floor(Math.random() * images.length);
+      let secondIndex;
+
+      // ensure second index is different from first
+      do {
+        secondIndex = Math.floor(Math.random() * images.length);
+      } while (secondIndex === firstIndex);
+
+      document.getElementById("ad1").src = images[firstIndex];
+      document.getElementById("link1").href = links[firstIndex];
+
+      // Set second image + link
+      document.getElementById("ad2").src = images[secondIndex];
+      document.getElementById("link2").href = links[secondIndex];
+    }  
+      
+    // Hyperlinks corresponding to each image
+    const links = [
+      "https://superfuckingmario.com",
+      "https://discord.com/channels/1269010383742701679/1408559124483936307",
+      "https://discord.gg/XC49prjjFM",
+      "https://recroomlaboratories.com/home",
+      "https://rec.net/room/GravityPulseEnlightened",
+      "https://californian-ea.org",
+      "https://rec.net/download"
+
+    ];  
+
+    // Show random images on page load
+    window.onload = showRandomImages;
+    
+  </script>
+
 </body>
 
 </html>
-
