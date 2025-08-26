@@ -28,6 +28,11 @@
 .auto-style8 {
 	font-size: x-large;
 }
+.auto-style9 {
+	text-align: left;
+	font-size: x-large;
+	font-family: "Comic Sans MS";
+}
 </style>
 <script type="text/javascript">
 <!--
@@ -63,13 +68,13 @@ function FP_getObjectByID(id,o) {//v1.0
 
   <script>
     const images = [
-      "ad/ad_mario.png",
-      "ad/ad_none.png",
-      "ad/ad_gay.png",
-      "ad/ad_rec.png",
-      "ad/ad_enlight.png",
-      "ad/ad_egg.png",
-      "ad/ad_nick.png"
+    "show/show_mario.png",
+    "show/show_none.png",
+    "show/show_gay.png",
+    "show/show_rec.png",
+    "show/show_enlight.png",
+    "show/show_egg.png",
+    "show/show_nick.png"
 
     ];
     
@@ -83,11 +88,11 @@ function FP_getObjectByID(id,o) {//v1.0
         secondIndex = Math.floor(Math.random() * images.length);
       } while (secondIndex === firstIndex);
 
-      document.getElementById("ad1").src = images[firstIndex];
+      document.getElementById("show1").src = images[firstIndex];
       document.getElementById("link1").href = links[firstIndex];
 
       // Set second image + link
-      document.getElementById("ad2").src = images[secondIndex];
+      document.getElementById("show2").src = images[secondIndex];
       document.getElementById("link2").href = links[secondIndex];
     }  
       
@@ -117,7 +122,7 @@ function FP_getObjectByID(id,o) {//v1.0
   <tr>
     <td style="height: 824px" valign="top"><br>
     <a id="link1" href="#" target="_blank">	
-	<img id="ad1" alt="" height="950" src="ad/ad_none.png" width="300" />&nbsp;</td>
+	<img id="show1" alt="" height="950" src="show/show_none.png" width="300" />&nbsp;</td>
     <td style="width: 1000px; height: 824px;" valign="top" class="auto-style4">
 	<hr class="auto-style1" noshade="noshade" />
 	
@@ -173,12 +178,12 @@ function FP_getObjectByID(id,o) {//v1.0
 	  </td>
   	  </tr>
 		<tr>
-    <td class="auto-style7"><span class="auto-style8"><br />
-	Elon Musk</span>&nbsp;</td>
+    <td class="auto-style9"><br />
+	Donald J Trump</td>
   	  </tr>
 		<tr>
     <td class="auto-style6" style="height: 42px">
-	June 28th 1971 - December 4th 2025&nbsp;<br />
+	14 June 1946 - September 4th 2025&nbsp;<br />
 	<br />
 	"Yes this is a threat"</td>
   	  </tr>
@@ -220,7 +225,7 @@ function FP_getObjectByID(id,o) {//v1.0
 
     <td style="height: 824px" valign="top"><br>
     <a id="link2" href="#" target="_blank">	
-	<img id="ad2" alt="" height="950" src="ad/ad_rec.png" width="300" /></td>
+	<img id="show2" alt="" height="950" src="show/show_rec.png" width="300" /></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
