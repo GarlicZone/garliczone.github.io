@@ -1,125 +1,53 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>GarlicZone - Home</title>
-<script>
-/* FrontPage navigation button scripts */
-function FP_swapImg() {
-  var doc = document, args = arguments, elm, n;
-  doc.$imgSwaps = [];
-  for (n = 2; n < args.length; n += 2) {
-    elm = FP_getObjectByID(args[n]);
-    if (elm) {
-      doc.$imgSwaps[doc.$imgSwaps.length] = elm;
-      elm.$src = elm.src;
-      elm.src = args[n + 1];
-    }
+<title>Random Ad Test</title>
+<style>
+  #ads-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
   }
-}
-
-function FP_getObjectByID(id, o) {
-  var c, el, els, f, m, n;
-  if (!o) o = document;
-  if (o.getElementById) el = o.getElementById(id);
-  else if (o.layers) c = o.layers;
-  else if (o.all) el = o.all[id];
-  if (el) return el;
-  if (o.id == id || o.name == id) return o;
-  if (o.childNodes) c = o.childNodes;
-  if (c)
-    for (n = 0; n < c.length; n++) {
-      el = FP_getObjectByID(id, c[n]);
-      if (el) return el;
-    }
-  f = o.forms;
-  if (f)
-    for (n = 0; n < f.length; n++) {
-      els = f[n].elements;
-      for (m = 0; m < els.length; m++) {
-        el = FP_getObjectByID(id, els[m]);
-        if (el) return el;
-      }
-    }
-  return null;
-}
-</script>
+  #ads-container img {
+    width: 300px;
+    height: 950px;
+    border: 1px solid #ccc;
+  }
+</style>
 </head>
+<body>
 
-<body style="background-color: #FFEEB9">
-<!-- Random Ads -->
-<div id="ads-container" style="display:flex; gap:10px; justify-content:center;">
+<div id="ads-container">
   <a id="link1" href="#" target="_blank">
-    <img id="ad1" src="ad/ad_none.png" alt="Random Image 1" width="300" height="950"/>
+    <img id="ad1" src="https://i.imgur.com/ThL5xBt.png" alt="Random Image 1"/>
   </a>
   <a id="link2" href="#" target="_blank">
-    <img id="ad2" src="ad/ad_none.png" alt="Random Image 2" width="300" height="950"/>
+    <img id="ad2" src="https://i.imgur.com/ThL5xBt.png" alt="Random Image 2"/>
   </a>
-</div>
+	<br><span lang="en-gb">ADVERT IMAGE LOADING TEST&nbsp; -&nbsp; NOT INTENDED 
+	FOR PUBLIC USE</span></div>
 
-<!-- Banner -->
-<div style="text-align:center;">
-  <img src="Image/BANNER_GAR.png" alt="" width="915" height="334"/>
-</div>
-
-<!-- Navigation -->
-<div style="text-align:center; margin:20px 0;">
-  <a href="index.html">
-    <img id="img1" src="button18.jpg" alt="HOME" width="100" height="20"
-      onmouseover="FP_swapImg(1,0,'img1','button19.jpg')"
-      onmouseout="FP_swapImg(0,0,'img1','button18.jpg')"
-      onmousedown="FP_swapImg(1,0,'img1','button1A.jpg')"
-      onmouseup="FP_swapImg(0,0,'img1','button19.jpg')"/>
-  </a>
-  <a href="laws.html">
-    <img id="img2" src="button44.jpg" alt="LAWS" width="100" height="20"
-      onmouseover="FP_swapImg(1,0,'img2','button45.jpg')"
-      onmouseout="FP_swapImg(0,0,'img2','button44.jpg')"
-      onmousedown="FP_swapImg(1,0,'img2','button46.jpg')"
-      onmouseup="FP_swapImg(0,0,'img2','button45.jpg')"/>
-  </a>
-  <a href="marked_database.html">
-    <img id="img3" src="button47.jpg" alt="DATABASE" width="100" height="20"
-      onmouseover="FP_swapImg(1,0,'img3','button48.jpg')"
-      onmouseout="FP_swapImg(0,0,'img3','button47.jpg')"
-      onmousedown="FP_swapImg(1,0,'img3','button49.jpg')"
-      onmouseup="FP_swapImg(0,0,'img3','button48.jpg')"/>
-  </a>
-  <a href="death.html">
-    <img id="img4" src="button4A.jpg" alt="MEMORIAL" width="100" height="20"
-      onmouseover="FP_swapImg(1,0,'img4','button4B.jpg')"
-      onmouseout="FP_swapImg(0,0,'img4','button4A.jpg')"
-      onmousedown="FP_swapImg(1,0,'img4','button4C.jpg')"
-      onmouseup="FP_swapImg(0,0,'img4','button4B.jpg')"/>
-  </a>
-</div>
-
-<!-- Randomizer Script -->
 <script>
 const images = [
-  "https://i.imgur.com/ThL5xBt.png",
-  "https://i.imgur.com/ThL5xBt.png",
-  "https://i.imgur.com/ThL5xBt.png",
-  "https://i.imgur.com/ThL5xBt.png",
   "https://i.imgur.com/ThL5xBt.png",
   "https://i.imgur.com/ThL5xBt.png",
   "https://i.imgur.com/ThL5xBt.png"
 ];
 
 const links = [
-  "https://superfuckingmario.com",
-  "https://discord.com/channels/1269010383742701679/1408559124483936307",
-  "https://discord.gg/XC49prjjFM",
-  "https://recroomlaboratories.com/home",
-  "https://rec.net/room/GravityPulseEnlightened",
-  "https://californian-ea.org",
-  "https://rec.net/download"
+  "https://imgur.com",
+  "https://imgur.com",
+  "https://imgur.com"
 ];
 
 function showRandomImages() {
-  let firstIndex = Math.floor(Math.random() * images.length);
+  const firstIndex = Math.floor(Math.random() * images.length);
   let secondIndex;
-  do { secondIndex = Math.floor(Math.random() * images.length); } while (secondIndex === firstIndex);
+  do {
+    secondIndex = Math.floor(Math.random() * images.length);
+  } while (secondIndex === firstIndex);
 
   const ad1 = document.getElementById("ad1");
   const ad2 = document.getElementById("ad2");
@@ -131,15 +59,12 @@ function showRandomImages() {
   ad2.src = images[secondIndex];
   link2.href = links[secondIndex];
 
-  console.log("ad1 src:", ad1.src, "link:", link1.href);
-  console.log("ad2 src:", ad2.src, "link:", link2.href);
+  console.log("ad1.src =", ad1.src, "link1.href =", link1.href);
+  console.log("ad2.src =", ad2.src, "link2.href =", link2.href);
 }
 
 window.addEventListener("load", showRandomImages);
 </script>
-<p><span lang="en-gb">DEBUGGING PAGE FOR ADVERTS&nbsp; -&nbsp; NOT FOR PUBLIC 
-USE</span></p>
+
 </body>
-
 </html>
-
