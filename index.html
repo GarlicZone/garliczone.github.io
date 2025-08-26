@@ -141,7 +141,7 @@ function FP_getObjectByID(id,o) {//v1.0
   </tr>
 </table>
 
- <script type="text/javascript">
+<script type="text/javascript">
   const images = [
     "ad/ad_mario.png",
     "ad/ad_none.png",
@@ -169,10 +169,23 @@ function FP_getObjectByID(id,o) {//v1.0
       secondIndex = Math.floor(Math.random() * images.length);
     } while (secondIndex === firstIndex);
 
-    document.getElementById("ad1").src = images[firstIndex];
-    document.getElementById("link1").href = links[firstIndex];
-    document.getElementById("ad2").src = images[secondIndex];
-    document.getElementById("link2").href = links[secondIndex];
+    console.log("First index:", firstIndex, "Image:", images[firstIndex], "Link:", links[firstIndex]);
+    console.log("Second index:", secondIndex, "Image:", images[secondIndex], "Link:", links[secondIndex]);
+
+    const ad1 = document.getElementById("ad1");
+    const ad2 = document.getElementById("ad2");
+    const link1 = document.getElementById("link1");
+    const link2 = document.getElementById("link2");
+
+    if (!ad1 || !ad2 || !link1 || !link2) {
+      console.error("❌ One or more elements not found in DOM!");
+      return;
+    }
+
+    ad1.src = images[firstIndex];
+    link1.href = links[firstIndex];
+    ad2.src = images[secondIndex];
+    link2.href = links[secondIndex];
   }
 
   window.addEventListener("load", showRandomImages);
@@ -181,5 +194,6 @@ function FP_getObjectByID(id,o) {//v1.0
 </body>
 
 </html>
+
 
 
