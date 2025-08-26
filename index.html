@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -72,7 +72,7 @@ function FP_getObjectByID(id,o) {//v1.0
   <tr>
     <td style="height: 824px"><br>
     <a id="link1" href="#" target="_blank">
-    <img id="ad1" src="ad/ad_none.png" alt="Random Image 1" height="950" width="300"/></a><br>
+    <img id="show1" src=show/show_none.png" alt="Random Image 1" height="950" width="300"/></a><br>
 	&nbsp;</td>
     <td style="width: 1000px; height: 824px;" valign="top" class="auto-style4">
 	<hr class="auto-style1" noshade="noshade" />
@@ -115,7 +115,7 @@ function FP_getObjectByID(id,o) {//v1.0
   <tr>
     <td class="auto-style6">
 	<ul>
-		<li>8/24/25 - GarlicZone Riot Police Service shuts down 
+		<li>8/22/25 - GarlicZone Riot Police Service shuts down 
 	after Leader Approval Ratings reach 101%</li>
 		<li>8/14/25 - NoodleOfficial is Egged upon within the Town Center</li>
 	</ul>
@@ -131,7 +131,7 @@ function FP_getObjectByID(id,o) {//v1.0
 
     <td style="height: 824px"><br>
     <a id="link2" href="#" target="_blank">
-    <img id="ad2" src="ad/ad_none.png" alt="Random Image 2" height="950" width="300"/><br>
+    <img id="show2" src="show/show_none.png" alt="Random Image 2" height="950" width="300"/><br>
 	  </td>
   </tr>
   <tr>
@@ -143,13 +143,13 @@ function FP_getObjectByID(id,o) {//v1.0
 
 <script type="text/javascript">
   const images = [
-    "ad/ad_mario.png",
-    "ad/ad_none.png",
-    "ad/ad_gay.png",
-    "ad/ad_rec.png",
-    "ad/ad_enlight.png",
-    "ad/ad_egg.png",
-    "ad/ad_nick.png"
+    "show/show_mario.png",
+    "show/show_none.png",
+    "show/show_gay.png",
+    "show/show_rec.png",
+    "show/show_enlight.png",
+    "show/show_egg.png",
+    "show/show_nick.png"
   ];
 
   const links = [
@@ -169,32 +169,14 @@ function FP_getObjectByID(id,o) {//v1.0
       secondIndex = Math.floor(Math.random() * images.length);
     } while (secondIndex === firstIndex);
 
-    console.log("First index:", firstIndex, "Image:", images[firstIndex], "Link:", links[firstIndex]);
-    console.log("Second index:", secondIndex, "Image:", images[secondIndex], "Link:", links[secondIndex]);
-
-    const ad1 = document.getElementById("ad1");
-    const ad2 = document.getElementById("ad2");
-    const link1 = document.getElementById("link1");
-    const link2 = document.getElementById("link2");
-
-    if (!ad1 || !ad2 || !link1 || !link2) {
-      console.error("❌ One or more elements not found in DOM!");
-      return;
-    }
-
-    ad1.src = images[firstIndex];
-    link1.href = links[firstIndex];
-    ad2.src = images[secondIndex];
-    link2.href = links[secondIndex];
+    document.getElementById("show1").src = images[firstIndex];
+    document.getElementById("link1").href = links[firstIndex];
+    document.getElementById("show2").src = images[secondIndex];
+    document.getElementById("link2").href = links[secondIndex];
   }
 
   window.addEventListener("load", showRandomImages);
 </script>
-
 </body>
 
 </html>
-
-
-
-
