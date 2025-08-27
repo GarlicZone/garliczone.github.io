@@ -72,7 +72,7 @@ function FP_getObjectByID(id,o) {//v1.0
   <tr>
     <td style="height: 824px"><br>
     <a id="link1" href="#" target="_blank">
-    <img id="show1" src=show/show_none.png" alt="Random Image 1" height="950" width="300"/></a><br>
+    <img id="show1" src="show/show_load.png" alt="Random Image 1" height="950" width="300"/></a><br>
 	&nbsp;</td>
     <td style="width: 1000px; height: 824px;" valign="top" class="auto-style4">
 	<hr class="auto-style1" noshade="noshade" />
@@ -115,9 +115,11 @@ function FP_getObjectByID(id,o) {//v1.0
   <tr>
     <td class="auto-style6">
 	<ul>
+		<li>8/26/2025 - RecRoom Inc reportedly 300 Million USD in debt after 
+		announcing staff layoffs. [<a href="https://blog.recroom.com/posts/2025/8/25/rec-room-update-august-2025">ARTICLE</a>]</li>
 		<li>8/22/25 - GarlicZone Riot Police Service shuts down 
 	after Leader Approval Ratings reach 101%</li>
-		<li>8/14/25 - NoodleOfficial is Egged upon within the Town Center</li>
+		<li>8/14/25 - NoodleOfficial is Egged upon within the Town Center.</li>
 	</ul>
 	  </td>
   </tr>
@@ -129,9 +131,9 @@ function FP_getObjectByID(id,o) {//v1.0
 
 	</td>
 
-    <td style="height: 824px"><br>
+    <td style="height: 824px">
     <a id="link2" href="#" target="_blank">
-    <img id="show2" src="show/show_none.png" alt="Random Image 2" height="950" width="300"/><br>
+    <img id="show2" src="show/show_load.png" alt="Random Image 2" height="950" width="300"/><br>
 	  </td>
   </tr>
   <tr>
@@ -141,42 +143,49 @@ function FP_getObjectByID(id,o) {//v1.0
   </tr>
 </table>
 
-<script type="text/javascript">
-  const images = [
+  <script>
+    const images = [
     "show/show_mario.png",
     "show/show_none.png",
     "show/show_gay.png",
     "show/show_rec.png",
     "show/show_enlight.png",
     "show/show_egg.png",
-    "show/show_nick.png"
-  ];
+    "show/show_nick.png",
+    "show/show_bread.gif"
 
-  const links = [
+    ];
+    
+
+    function showRandomImages() {
+      let firstIndex = Math.floor(Math.random() * images.length);
+      let secondIndex;
+
+      // ensure second index is different from first
+      do {
+        secondIndex = Math.floor(Math.random() * images.length);
+      } while (secondIndex === firstIndex);
+
+      document.getElementById("show1").src = images[firstIndex];
+      document.getElementById("link1").href = links[firstIndex];
+
+      // Set second image + link
+      document.getElementById("show2").src = images[secondIndex];
+      document.getElementById("link2").href = links[secondIndex];
+    }  
+      
+    // Hyperlinks corresponding to each image
+    const links = [
     "https://superfuckingmario.com",
     "https://discord.com/channels/1269010383742701679/1408559124483936307",
     "https://discord.gg/XC49prjjFM",
     "https://recroomlaboratories.com/home",
     "https://rec.net/room/GravityPulseEnlightened",
     "https://californian-ea.org",
-    "https://rec.net/download"
-  ];
-
-  function showRandomImages() {
-    let firstIndex = Math.floor(Math.random() * images.length);
-    let secondIndex;
-    do {
-      secondIndex = Math.floor(Math.random() * images.length);
-    } while (secondIndex === firstIndex);
-
-    document.getElementById("show1").src = images[firstIndex];
-    document.getElementById("link1").href = links[firstIndex];
-    document.getElementById("show2").src = images[secondIndex];
-    document.getElementById("link2").href = links[secondIndex];
-  }
-
-  window.addEventListener("load", showRandomImages);
-</script>
-</body>
-
-</html>
+    "https://rec.net/download",
+    "https://breadhub.org"   
+    ];  
+    // Show random images on page load
+    window.onload = showRandomImages;
+    
+  </script>
